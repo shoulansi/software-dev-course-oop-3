@@ -3,16 +3,16 @@
 ## Introduction
 
 In this exercise, you will be completing a project that simulates a management system for a media collection.
-The `Main` class providing a menu system for the user is already implemented, but the `LibraryItem` class and its
-subclasses `Album`, `Movie`, and `Book` need to be created and implemented.
+The `Main` class providing a menu system for the user is already implemented, but the `org.example.LibraryItem` class and its
+subclasses `org.example.Album`, `Movie`, and `Book` need to be created and implemented.
 
 > [!NOTE]
 > The current project will not build or run, and tests will not run properly until you have completed the exercise.
 
-## Creating the Base Class `LibraryItem`
+## Creating the Base Class `org.example.LibraryItem`
 
-The first class that you will need to create is the `LibraryItem` class.  This class will be the base class for the
-`Album`, `Movie`, and `Book` classes, and need to contain the following `protected` fields:
+The first class that you will need to create is the `org.example.LibraryItem` class.  This class will be the base class for the
+`org.example.Album`, `Movie`, and `Book` classes, and need to contain the following `protected` fields:
 
 | Property | Type   | Description                            |
 |----------|--------|----------------------------------------|
@@ -20,11 +20,11 @@ The first class that you will need to create is the `LibraryItem` class.  This c
 | year     | int    | The year the item was released         |
 | author   | String | The author of the item (if applicable) |
 
-The `LibraryItem` class should also contain the following methods:
+The `org.example.LibraryItem` class should also contain the following methods:
 
 | Method        | Arguments                                         | Return Type  | Description                                            |
 |---------------|---------------------------------------------------|--------------|--------------------------------------------------------|
-| `LibraryItem` | `title` (String), `year` (int), `author` (String) | None         | Constructor that initializes the fields of the class   |
+| `org.example.LibraryItem` | `title` (String), `year` (int), `author` (String) | None         | Constructor that initializes the fields of the class   |
 | `toString`    | None                                              | String       | Returns a string representation of the item            |
 | `getTitle`    | None                                              | String       | Returns the title of the item (getter method)          |
 | `getYear`     | None                                              | int          | Returns the year the item was released (getter method) |
@@ -36,9 +36,9 @@ For your `toString` method, return a string formatted as follows:
 Item: <title> by <author> (<year>)
 ```
 
-## Creating the `Album` Subclass
+## Creating the `org.example.Album` Subclass
 
-The `Album` class is a subclass of the `LibraryItem` class and should contain the following additiohnal `protected` fields:
+The `org.example.Album` class is a subclass of the `org.example.LibraryItem` class and should contain the following additiohnal `protected` fields:
 
 | Property   | Type    | Description                             |
 |------------|---------|-----------------------------------------|
@@ -50,27 +50,27 @@ You should also include an accessor method for the `trackCount` field:
 |-----------------|--------------|-------------|-----------------------------------------------------------|
 | `getTrackCount` | None         | int         | Returns the number of tracks on the album (getter method) |
 
-You will also need to implement a constructor that accepts the same arguments as the `LibraryItem` constructor, as well as
+You will also need to implement a constructor that accepts the same arguments as the `org.example.LibraryItem` constructor, as well as
 an additional argument for the `trackCount` field.  Remember to call the superclass constructor to initialize the fields of the
-`LibraryItem` class, using the `super` keyword.
+`org.example.LibraryItem` class, using the `super` keyword.
 
-Finally, you will need to override the `toString` method to return a string representation of the `Album` object.  The string
+Finally, you will need to override the `toString` method to return a string representation of the `org.example.Album` object.  The string
 
-You should override the `toString` method to return a string representation of the `Album` object in the following format:
+You should override the `toString` method to return a string representation of the `org.example.Album` object in the following format:
 
 ```
-Album: <title> by <author> (<year>) - <trackCount> tracks
+org.example.Album: <title> by <author> (<year>) - <trackCount> tracks
 ```
 
 | Method          | Arguments                                                             | Return Type  | Description                                                |
 |-----------------|-----------------------------------------------------------------------|--------------|------------------------------------------------------------|
-| `Album`         | `title` (String), `year` (int), `author` (String), `trackCount` (int) | None         | Constructor that initializes the fields of the class       |
+| `org.example.Album`         | `title` (String), `year` (int), `author` (String), `trackCount` (int) | None         | Constructor that initializes the fields of the class       |
 | `toString`      | None                                                                  | String       | Returns a string representation of the album               |
 
 
 ## Creawting the `Movie` Subclass
 
-The `Movie` class is a subclass of the `LibraryItem` class and should contain the following additional `protected` fields:
+The `Movie` class is a subclass of the `org.example.LibraryItem` class and should contain the following additional `protected` fields:
 
 | Property          | Type    | Description                             |
 |-------------------|---------|-----------------------------------------|
@@ -82,9 +82,9 @@ You should also include an accessor method for the `durationInMinutes` field:
 |-------------------------|--------------|-------------|--------------------------------------------------------------|
 | `getDurationInMinutes`  | None         | int         | Returns the duration of the movie in minutes (getter method) |
 
-You will also need to implement a constructor that accepts the same arguments as the `LibraryItem` constructor, as well as
+You will also need to implement a constructor that accepts the same arguments as the `org.example.LibraryItem` constructor, as well as
 an additional argument for the `durationInMinutes` field.  Remember to call the superclass constructor to initialize the fields of the
-`LibraryItem` class, using the `super` keyword.
+`org.example.LibraryItem` class, using the `super` keyword.
 
 Finally, you will need to override the `toString` method to return a string representation of the `Movie` object.  The string
 
@@ -101,7 +101,7 @@ Movie: <title> by <author> (<year>) - <durationInMinutes> minutes
 
 ## Creating the `Book` Subclass
 
-The `Book` class is a subclass of the `LibraryItem` class and should contain the following additional `protected` fields:
+The `Book` class is a subclass of the `org.example.LibraryItem` class and should contain the following additional `protected` fields:
 
 | Property   | Type    | Description                             |
 |------------|---------|-----------------------------------------|
@@ -113,16 +113,16 @@ You should also include an accessor method for the `pageCount` field:
 |-----------------|--------------|-------------|--------------------------------------------------------------|
 | `getPageCount`  | None         | int         | Returns the number of pages in the book (getter method)      |
 
-You will also need to implement a constructor that accepts the same arguments as the `LibraryItem` constructor, as well as
+You will also need to implement a constructor that accepts the same arguments as the `org.example.LibraryItem` constructor, as well as
 an additional argument for the `pageCount` field.  Remember to call the superclass constructor to initialize the fields of the
-`LibraryItem` class, using the `super` keyword.
+`org.example.LibraryItem` class, using the `super` keyword.
 
 Finally, you will need to override the `toString` method to return a string representation of the `Book` object.  The string
 
 You should override the `toString` method to return a string representation of the `Book` object in the following format:
 
 ```java
-"Book: <title> by <author> (<year>) - <pageCount> pages"
+//"Book: <title> by <author> (<year>) - <pageCount> pages"
 ```
 
 | Method          | Arguments                                                             | Return Type  | Description                                                |

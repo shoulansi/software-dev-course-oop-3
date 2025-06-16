@@ -17,6 +17,6 @@ public class AlbumTests {
     @Test
     public void testAlbumToString() {
         Album album = new Album("The Dark Side of the Moon", "Pink Floyd", 1973, 10);
-        assertEquals("Album: The Dark Side of the Moon by Pink Floyd (1973) - 10 tracks", album.toString());
+        assertEquals("org.example.Album: The Dark Side of the Moon by Pink Floyd (1973) - 10 tracks", album.toString());
     }
 }

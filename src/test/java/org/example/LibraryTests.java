@@ -16,7 +16,7 @@ public class LibraryTests {
 
         assertEquals(3, library.size());
         assertEquals("Book: The Catcher in the Rye by J.D. Salinger (1951) - 234 pages", library.get(0).toString());
-        assertEquals("Album: The Dark Side of the Moon by Pink Floyd (1973) - 10 tracks", library.get(1).toString());
+        assertEquals("org.example.Album: The Dark Side of the Moon by Pink Floyd (1973) - 10 tracks", library.get(1).toString());
         assertEquals("Movie: The Dark Knight by Christopher Nolan (2008) - 152 minutes", library.get(2).toString());
     }
 }
